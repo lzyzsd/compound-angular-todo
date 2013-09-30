@@ -1,7 +1,10 @@
 module.exports = (compound, Task) ->
   # define Task here
 
-  Task.crud = (id, body, callback) ->
+  Task.crud = (body, callback) ->
+
+    # get or generate a new id
+    id = body.id or Math.ceil(Math.random()*100000000)
 
     # protect sticky notes
     if compound.db.tasks[id] and compound.db.tasks[id].sticky
