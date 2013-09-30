@@ -3,6 +3,7 @@ html
   head
     title= title
     != stylesheetLinkTag('bootstrap', 'application', 'bootstrap-responsive')
+
   body(ng-app="tasksApp")
     .navbar
         .navbar-inner
@@ -15,11 +16,12 @@ html
       hr
       footer
         p 
-          | 2013 Tutorial created by Sagish
-          | | 
-          a(href="") Read it 
-          | | 
-          a(href="") Review GitHub source
+          | 2013 Tutorial created by 
+          a(href="http://twitter.com/sagish") Sagish
+          span.pipe | 
+          a(href="https://medium.com/what-i-learned-building/e490fb9c0c73", target="_blank") Read the complete article
+          span.pipe |
+          a(href="https://github.com/sagish/compound-angular-todo", target="_blank") Review GitHub source
 
     script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js")
     script(src="/javascripts/application.js")
