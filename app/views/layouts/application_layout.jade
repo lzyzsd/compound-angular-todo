@@ -1,0 +1,25 @@
+!!! 5
+html
+  head
+    title= title
+    != stylesheetLinkTag('bootstrap', 'application', 'bootstrap-responsive')
+  body(ng-app="tasksApp")
+    .navbar
+        .navbar-inner
+            .container
+               a.brand(href='#') Compound Angular To Do App
+
+    .container
+      != body
+
+      hr
+      footer
+        p 
+          | 2013 Tutorial created by Sagish
+          | | 
+          a(href="") Read it 
+          | | 
+          a(href="") Review GitHub source
+
+    script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js")
+    script(src="/javascripts/application.js")

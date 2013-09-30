@@ -1,0 +1,36 @@
+body {
+  background: #fff;
+}
+ul,
+ul li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 0 10px 0;
+  overflow: hidden;
+}
+ul .btn,
+ul li .btn {
+  margin-left: 2px;
+}
+ul .done,
+ul li .done {
+  color: #aaa;
+  text-decoration: line-through;
+  font-style: italic;
+}
+ul li {
+  position: relative;
+}
+ul li .actions {
+  -webkit-transition: all 200ms linear;
+  -moz-transition: all 200ms linear;
+  transition: all 200ms linear;
+  float: right;
+  opacity: 0.5;
+}
+ul li .actions:hover {
+  opacity: 1;
+}
+ul li.edit .actions {
+  opacity: 1;
+}
