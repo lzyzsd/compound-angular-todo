@@ -1,17 +1,26 @@
 h1 My Tasks
 
 section(ng-controller="main")
+
   ul
+
     li(ng-repeat="task in tasks", ng-class="{edit: task.edit}")
+
       input(type="checkbox", ng-checked="task.completed", ng-click="save($index)", ng-model="task.completed", ng-hide="task.edit") 
+
       span(ng-class="{done: task.completed}")  
         span(ng-hide="task.edit") {{task.description}}
+
       input(ng-show="task.edit", ng-model="task.description", class="input", ng-keypress="keyup($index, $event)")
+
       div.actions(ng-hide="task.sticky")
+
         span(ng-show="task.edit")
           a(class="btn btn-primary", ng-click="save($index)") Save 
           a(class="btn", ng-click="cancel($index)") Cancel
+
         span(ng-hide="task.edit")
           a(class="btn", ng-click="edit($index)") Edit 
           a(class="btn btn-danger", ng-click="remove($index)", ng-show="task.id") Remove
+
   a(class="btn btn-primary", ng-click="new()") New
