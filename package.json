@@ -14,7 +14,8 @@
     "coffee-script": ">= 1.1.1",
     "stylus": "latest",
     "seedjs": "latest",
-    "co-assets-compiler": "*"
+    "co-assets-compiler": "*",
+    "co-generators": "*"
   },
   "devDependencies": {
     "nodeunit": "*",
@@ -23,7 +24,6 @@
     "mocha": ">= 0",
     "should": ">= 0",
     "semicov": "*",
-    "co-generators": "*",
     "node-dev": "~2.0.2"
   },
   "scripts": {
