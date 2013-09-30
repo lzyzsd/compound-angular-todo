@@ -19,13 +19,12 @@ action 'save', ->
   if body.remove
     task = compound.db.tasks[id]
     if task and not task.sticky
-      console.log "deleting #{id}"
       delete compound.db.tasks[id]
       return send 200
 
   # dont allow a big db in our example
-  if Object.keys(compound.db.tasks).length >= 4 and not compound.db.tasks[id]
-    return send 200, error: "no new tasks please"
+  if Object.keys(compound.db.tasks).length >= 25 and not compound.db.tasks[id]
+    return send 200, error: "No new tasks please"
 
   # create or updated an existing task
   compound.db.tasks[id] = {
